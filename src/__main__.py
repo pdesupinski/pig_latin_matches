@@ -3,4 +3,6 @@ from src.pig_latin_translator import PigLatinTranslator
 from src.translation_matcher import TranslationMatcher
 
 translation_matcher = TranslationMatcher(PigLatinTranslator(), CMUDictionaryGetter())
-print(str(translation_matcher.get_all_matches()))
+word_to_translated_matches = translation_matcher.get_word_to_translated_matches()
+for word, translated_matches in word_to_translated_matches.items():
+    print(f"{word}: {', '.join(translated_matches)}")
