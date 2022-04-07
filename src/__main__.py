@@ -1,3 +1,6 @@
-from src.data import get_words_from_dataset
+from src.cmu_dictionary_getter import CMUDictionaryGetter
+from src.pig_latin_translator import PigLatinTranslator
+from src.translation_matcher import TranslationMatcher
 
-print(str(get_words_from_dataset()))
+translation_matcher = TranslationMatcher(PigLatinTranslator(), CMUDictionaryGetter())
+print(str(translation_matcher.get_all_matches()))

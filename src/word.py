@@ -1,7 +1,7 @@
 from dataclasses import dataclass
-from typing import Sequence, Type
+from typing import Tuple, Type
 
-Pronunciation: Type[object] = Sequence[str]
+Pronunciation: Type[object] = Tuple[str, ...]
 
 
 @dataclass(frozen=True)

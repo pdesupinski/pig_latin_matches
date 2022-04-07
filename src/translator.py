@@ -6,5 +6,5 @@ from src.word import Pronunciation, Word
 class Translator(ABC):
     @staticmethod
     @abstractmethod
-    def translate(word: Word) -> Pronunciation:
+    def translate(pronunciation: Pronunciation) -> Pronunciation:
         pass
