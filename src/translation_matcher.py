@@ -31,7 +31,7 @@ class TranslationMatcher:
         }
         return {
             word.spelling: {
-                remove_non_alpha(translated_match.spelling)
+                translated_match.spelling
                 for translated_match in translated_matches
             }
             for word, translated_matches in word_to_translated_matches.items()
